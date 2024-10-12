@@ -1,19 +1,15 @@
-import Home from './home';
-import Login from './login';
-import Register from './register'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import Home from "./home";
+import Login from "./login";
+import Register from "./register";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import './App.css'
+import "./App.css";
 
 // 定义
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    
   },
   {
     path: "/login",
@@ -26,11 +22,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  
-
-  return (
-    <RouterProvider router={router} />
-  )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;

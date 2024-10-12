@@ -1,15 +1,22 @@
 {
   "name": "demo-login",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
     "check": "npx prettier . --check",
-    "prepare": "husky"
+    "prepare": "husky",
+    "format": "prettier --write .",
+    "lint": "eslint ."
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "ahooks": "^3.8.1",
