@@ -6,22 +6,25 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 
 // 定义
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
+    },
+  ],
   {
-    path: "/",
-    element: <Home />,
+    basename: "/demo-login/",
   },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/register",
-    element: <Register />,
-  },
-], {
-  basename: "/demo-login/"
-});
+);
 
 function App() {
   return <RouterProvider router={router} />;
