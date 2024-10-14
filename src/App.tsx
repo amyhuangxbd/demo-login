@@ -19,7 +19,9 @@ const router = createBrowserRouter([
     path: "/register",
     element: <Register />,
   },
-]);
+], {
+  basename: "/demo-login/"
+});
 
 function App() {
   return <RouterProvider router={router} />;

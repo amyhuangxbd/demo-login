@@ -10,5 +10,5 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-  base: "/demo-login/"
+  base: "/demo-login/",
 });
